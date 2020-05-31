@@ -9,11 +9,11 @@ class ProductList extends Component {
       <Fragment>
         <div className='py-5'>
           <div className='container'>
-            <Title name='out' title='products' />
+            <Title name='out' title='products list' />
             <div className='row'>
               <ProductConsumer>
-                {value => {
-                  return value.products.map(product => {
+                {(value) => {
+                  return value.products.map((product) => {
                     return <Product key={product.id} product={product} />;
                   });
                 }}
